@@ -1,5 +1,5 @@
 ## Introduction
-In this port, will analyze how Java compiler creates byte code of Lambda Implementation.
+In this blog post, will analyze how Java compiler creates byte code of Lambda Implementation.
 
 ## Analysis
 * As per definition, Lambda is nothing but functional implementation code block. 
