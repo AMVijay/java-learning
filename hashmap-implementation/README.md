@@ -1,9 +1,15 @@
 # HashMap Implementation
 
 ## Introduction
-* HashMap is one of the key collection type in Java. 
+* HashMap is one of the important collection type in Java and used by developers mostly. 
 * It stores objects as Key-Value pairs.
 * It uses Hash value of Key to store and retrieve the object from the collection.
+
+## Implementation
+* For `HashMap testHashMap = new HashMap();`, 
+
+
+
 
 ## Internal Representation
 Below is the internal view of objects for the collection of listed object: 
