@@ -6,7 +6,12 @@
 * It uses Hash value of Key to store and retrieve the object from the collection.
 
 ## Implementation
-* For `HashMap testHashMap = new HashMap();`, 
+* HashMap Object collection implementation uses Array of Object Node<Key, Value>.
+* HashMap object initialization is the first step. `HashMap testHashMap = new HashMap();`, Here, it loadFactor value 0.75 is loaded from Defauly load factor.
+* When data is getting added using `.put(key, value)` method, 
+    * Step 1: `hashkey(key)`-  HashKey is generated for the key.
+    * Step 2: `resize()` - resizing of the HashMap object happens.
+    * Step 3: Derive the index value using the logic 
 
 
 
