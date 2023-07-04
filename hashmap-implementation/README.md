@@ -7,11 +7,25 @@
 
 ## Implementation
 * HashMap Object collection implementation uses Array of Object Node<Key, Value>.
-* HashMap object initialization is the first step. `HashMap testHashMap = new HashMap();`, Here, it loadFactor value 0.75 is loaded from Defauly load factor.
-* When data is getting added using `.put(key, value)` method, 
-    * Step 1: `hashkey(key)`-  HashKey is generated for the key.
-    * Step 2: `resize()` - resizing of the HashMap object happens.
-    * Step 3: Derive the index value using the logic 
+```
+class Node<K,V> {
+    final int hash; // hash value of key
+    final K key;    // key value 
+    V value;        // value
+    Node<K,V> next; // Next node
+}
+```
+* HashMap object initialization is the first step. `HashMap testHashMap = new HashMap();`, Here, loadFactor value 0.75 is initialized from Defauly load factor.
+* Data is added using `.put(key, value)` method call. Implementation logic of `.put()`: 
+    * Step 1: `hash(key)`-  Hash value
+    is generated for the input key.
+    * Step 2: For very first value adding into collection, `resize()` method is called to initialize the `Node<K,V>[] table`.  determines the size of the array used for HashMap Collection.
+    * Step 3: Get the size of the internal Array `Node<K,V>[] table`.
+    * Step 4: Determine the index value to push new element. Logic uses Bitwise AND operator between (size of the array - 1) and hash value. In this case, index value will be random and it won't be higher than size of array.
+    * Step 5: Now Check whether array has value already in the derived index. 
+        * If no, then create `new Node(hash,key, value, null)` and set this node in the array in the derived index `table[i] = new Node(hash,key, value, null)` .
+        * If yes, then traverse to the next element using `node.next` and repeat Step 5 flow.
+    *  
 
 
 
