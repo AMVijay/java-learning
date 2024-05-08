@@ -25,7 +25,7 @@ class Node<K,V> {
     * **Step 5:** Now Check whether array has value already in the derived index. 
         * If no, then create `new Node(hash,key, value, null)` and set this node in the array in the derived index `table[i] = new Node(hash,key, value, null)` .
         * If yes, then traverse to the next element using `node.next` and repeat Step 5 flow.
-    *  
+    * **Step 6:**  
 
 
 
@@ -44,10 +44,5 @@ Key = "8", Value = "eight"
 Key = "9", Value = "nine"
 Key = "10", Value = "ten"
 ```
-## .put() method implementation
-* Internally objects are organized as Array of Objects.
-```
-transient Node<K,V>[] table;
-```
-* 
+
 
